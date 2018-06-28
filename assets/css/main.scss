@@ -1,0 +1,179 @@
+$color-blue: #00AEC7;
+$color-yellow: #FFBF3F;
+$color-orange: #FC4C02;
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.Header {
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+  margin-top: 60px;
+
+  h1 {
+    border-bottom: 2px solid orange;
+  }
+}
+
+.Product-action {
+  width: 100%;
+  display: block;
+  padding: 8px 0 5px 0;
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+  background-color: $color-orange;
+  transition: background .2s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: $color-orange;
+    border: 1px solid $color-orange;
+  }
+}
+
+.ProductList {
+  border: 1px solid $color-blue;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  img {
+    width: 200px;
+  }
+
+  .Product {
+    margin-bottom: 15px;
+  }
+
+  .Product-informations {
+    display: flex;
+  }
+
+  .Product-title {
+    width: 80%;
+    font-weight: bold;
+  }
+
+  .Product-price {
+    width: 20%;
+    text-align: right;
+  }
+
+}
+
+.Basket {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 1px solid $color-yellow;
+  border-radius: 10px 0 0 0;
+  padding: 15px;
+  background-color: white;
+
+  .Product {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .Product-title {
+    font-weight: bold;
+  }
+
+  .Product-action {
+    width: auto;
+    background-color: #850000;
+    padding: 6px 6px 3px 6px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: red;
+      color: white;
+      border: 1px solid red;
+    }
+  }
+}
+
+
+
+.Dashboard {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: 1px solid $color-yellow;
+  background-color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Counter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  border: 1px solid black;
+  color: $color-orange;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  p {
+    margin: 0;
+    padding: 0 5px;
+  }
+}
+
+.TodoList {
+  background-color: $color-blue;
+  margin-left: 20px;
+  width: 450px;
+  border-radius: 5px;
+}
+
+.TodoList-item {
+  margin: 10px 10px;
+  padding: 0 10px;
+  background-color: white;
+  border-radius: 20px;
+  color: $color-blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TodoList-action{
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: background .2s ease-in;
+
+  &--done {
+    background-color: green;
+    &:hover {
+      background-color: #00b700;
+    }
+  }
+  &--remove {
+    background-color: red;
+    &:hover {
+      background-color: #ff4f0d;
+    }
+  }
+}

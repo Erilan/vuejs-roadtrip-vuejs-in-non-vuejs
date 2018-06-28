@@ -1,0 +1,42 @@
+{% extends 'pagelayout.html.twig' %}
+
+{% block content %}
+  {# no prods, no store #}
+  <div data-vue-app="counter"></div>
+
+  {# no props, but use store #}
+  {# DEMO : add todo list count synchronization #}
+  <div data-vue-app="dashboard"></div>
+
+  <div class="container">
+    {# HTML shell then handled by vue, use props to initialize #}
+    <div class="ProductList" data-vue-app="product-list" data-products="{{ products|json_encode }}">
+      {% for product in products %}
+        <div class="Product">
+          <img src="{{ asset(product.image) }}">
+          <div class="Product-informations">
+            <span class="Product-title">{{ product.name }}</span>
+            <span class="Product-price">{{ product.price }}€</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {#todo list html puis vue --> demo ?#}
+    <div class="TodoList">
+      <div class="TodoList-item">
+        <p>Drink some beers (a lot)</p>
+        <div class="TodoList-actions">
+          <span class="TodoList-action TodoList-action--done">mark as done</span>
+          <span class="TodoList-action TodoList-action--remove">remove</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# use store to synchronize with product list, use props to initialize #}
+  <div data-vue-app="basket" data-basket-products="{{ basketProducts|json_encode }}"></div>
+
+
+
+{% endblock %}
