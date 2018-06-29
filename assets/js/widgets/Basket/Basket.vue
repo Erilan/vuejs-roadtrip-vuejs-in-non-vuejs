@@ -1,5 +1,5 @@
 <template>
-  <div v-if="products.length" class="Basket">
+  <div v-if="hasProducts" class="Basket">
     <product
       v-for="product in products"
       :key="product.id"
@@ -27,6 +27,9 @@
     computed: {
       products () {
         return this.$store.state.basket.products
+      },
+      hasProducts () {
+        return this.products.length > 0
       }
     },
     methods: {

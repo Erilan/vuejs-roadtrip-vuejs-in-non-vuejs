@@ -141,7 +141,8 @@ body {
 }
 
 .TodoList {
-  background-color: $color-blue;
+  //background-color: $color-blue;
+  background-color: rgba(0, 174, 199, 0.5);
   margin-left: 20px;
   width: 450px;
   border-radius: 5px;
@@ -156,6 +157,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &--done {
+    background-color: #00b700;
+    color: white;
+  }
 }
 
 .TodoList-action{
@@ -163,6 +169,7 @@ body {
   padding: 8px;
   cursor: pointer;
   transition: background .2s ease-in;
+  border-radius: 8px;
 
   &--done {
     background-color: green;

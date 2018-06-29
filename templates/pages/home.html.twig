@@ -22,12 +22,18 @@
       {% endfor %}
     </div>
 
-    {#todo list html puis vue --> demo ?#}
+    {# HTML shell then handled by vue, use props to initialize #}
     <div class="TodoList">
       <div class="TodoList-item">
         <p>Drink some beers (a lot)</p>
         <div class="TodoList-actions">
           <span class="TodoList-action TodoList-action--done">mark as done</span>
+          <span class="TodoList-action TodoList-action--remove">remove</span>
+        </div>
+      </div>
+      <div class="TodoList-item TodoList-item--done">
+        <p>Drink some beers (a lot)</p>
+        <div class="TodoList-actions">
           <span class="TodoList-action TodoList-action--remove">remove</span>
         </div>
       </div>

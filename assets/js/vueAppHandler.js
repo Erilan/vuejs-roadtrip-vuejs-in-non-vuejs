@@ -15,17 +15,8 @@ export default (function () {
 
   self.init = function () {
     document.querySelectorAll('[data-vue-app="counter"]').forEach(function(element) {
-      let props = {}
-      for (let key in element.dataset) {
-        try {
-          props[key] = JSON.parse(element.dataset[key])
-        } catch (e) {
-          props[key] = element.dataset[key]
-        }
-      }
-
       new Vue({
-        render: h => h(Counter, {props}),
+        render: h => h(Counter),
       }).$mount(element)
 
     })
