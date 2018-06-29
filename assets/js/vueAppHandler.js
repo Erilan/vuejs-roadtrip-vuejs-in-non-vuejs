@@ -25,7 +25,6 @@ export default (function () {
       }
 
       new Vue({
-        store,
         render: h => h(Counter, {props}),
       }).$mount(element)
 
