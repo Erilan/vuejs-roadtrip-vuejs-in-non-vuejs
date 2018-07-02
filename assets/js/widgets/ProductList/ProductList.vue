@@ -20,16 +20,8 @@
     components: {
       Product
     },
-    data () {
-      return {
-        //count: this.startValue
-      }
-    },
-    computed: {
-    },
     methods: {
       getButtonAction (product) {
-        //console.log('get', product.id)
         if (this.productIsAlreadyInBasket(product.id)) {
           return {
             method: this.removeProductFromBasket,
@@ -56,9 +48,6 @@
         }).length
         return true
       }
-    },
-    mounted () {
-      console.log(this.products)
     }
   }
 </script>

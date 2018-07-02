@@ -13,20 +13,6 @@
 
   export default {
     name: 'Product',
-    props: ['product', 'action'],
-    components: {
-    },
-    data () {
-      return {
-      }
-    },
-    computed: {
-    },
-    methods: {
-
-    },
-    mounted () {
-      console.log('okkk')
-    }
+    props: ['product', 'action']
   }
 </script>

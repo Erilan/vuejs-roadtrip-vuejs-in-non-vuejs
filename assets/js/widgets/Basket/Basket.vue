@@ -20,10 +20,6 @@
     components: {
       Product
     },
-    data () {
-      return {
-      }
-    },
     computed: {
       products () {
         return this.$store.state.basket.products
@@ -41,7 +37,6 @@
       this.basketProducts.forEach((item) => {
         this.$store.commit(ADD_PRODUCT, item)
       })
-      console.log(this.basketProducts)
     }
   }
 </script>

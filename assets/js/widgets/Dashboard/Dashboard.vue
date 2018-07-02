@@ -11,21 +11,10 @@
 
   export default {
     name: 'Dashboard',
-    props: [],
-    components: {
-    },
-    data () {
-      return {
-      }
-    },
     computed: {
       basketProductsCount () {
         return this.$store.state.basket.products.length
       }
-    },
-    methods: {
-    },
-    mounted () {
     }
   }
 </script>
